@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+    <title>{% block title %} {{user_data.username}} {% endblock %}</title>
+
+{% block body %}
+<style>
+    .top{
+        margin-top: 5%;
+    }
+
+</style>
+
+<div class="container top">
+    <div class="row">
+        <div class="col-12 mt-5 mx-auto mb-5">
+          <h2>Book</h2>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">year</th>
+                <th scope="col">isbn</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{book.title}}</th>
+                  <td>{{book.author}}</td>
+                  <td>{{book.year}}</td>
+                  <td>{{book.isbn}}</td>
+                </tr>
+            </tbody>
+          </table>
+          <hr>
+        </div>
+
+            
+            <div class="row">
+              <div class="col-12">
+                  <h3 class="text-center text-primary mt-3">informations on Goodreads api</h3>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">ratings_count</th>
+                      <th scope="col">reviews_count</th>
+                      <th scope="col">text_reviews_count</th>
+                      <th scope="col">work_ratings_count</th>
+                      <th scope="col">work_reviews_count</th>
+                      <th scope="col">work_text_reviews_count</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                    {%for data in data.books %}
+                      <th scope="row">{{data.ratings_count}}</th>
+                        <td>{{data.reviews_count}}</td>
+                        <td>{{data.text_reviews_count}}</td>
+                        <td>{{data.work_ratings_count}}</td>
+                        <td>{{data.work_reviews_count}}</td>
+                        <td>{{data.work_text_reviews_count}}</td>
+                       {% endfor %}
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+{% endblock %}

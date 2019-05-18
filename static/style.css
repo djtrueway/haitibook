@@ -1,0 +1,298 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(235, 231, 231, 0.39);
+}
+/**  rgba(255, 255, 255, 0.555) */
+
+nav{
+    margin: 0px;
+    padding: 0px;
+    background-color:  rgb(43, 109, 117);
+}
+
+
+h3{
+    font-family: Crimson Text;
+}
+
+h5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.avatar{
+    width: 140px;
+    height: 140px;
+    background-color:   rgba(235, 235, 235, 0.5);
+    border-radius: 50%;
+    border : 1px solid rgb(43, 109, 117);
+}
+
+.user-info{
+    position: fixed;
+}
+
+.top-article{
+    position: fixed;
+}
+
+.top-article-color{
+    background-color: rgb(43, 109, 117);
+    width: 80%;
+    float: right;
+    margin-right: 20px
+}
+
+.avatar-follow{
+    width: 100px;
+    height: 100px;
+    background-color:   rgba(235, 235, 235, 0.5);
+    border-radius: 50%;
+    border : 1px solid rgb(43, 109, 117);
+}
+
+.card-body h4 {
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.disabled{
+    color: rgb(43, 109, 117);
+}
+
+.btn{
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 109, 117);
+}
+
+.fa{
+    font-size: 20px;
+}
+
+.move:hover{
+    color: aliceblue;
+    font-size: 35px;
+}
+
+.article{
+    border: 1px solid  rgb(212, 212, 212); 
+    background-color:  rgba(235, 235, 235, 0.5);
+}
+
+.article-follow{
+    border: 1px solid  rgb(212, 212, 212); 
+    background-color:  rgba(235, 235, 235, 0.5);
+}
+
+strong{
+    color: rgb(43, 109, 117);
+}
+
+nav strong{
+    color: whitesmoke;
+    font-family: 'Righteous', cursive;
+    font-size: 25px
+}
+
+.logo{
+    color: white;
+    font-family: 'Anton', cursive;
+    font-size:50px
+}
+
+.titre{
+    font-family: 'Arvo', serif;
+    color: black
+}
+
+.titre:hover{
+    font-family: 'Arvo', serif;
+    text-decoration-line: none;
+    color: black
+}
+
+a:hover{
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+
+.google{
+    color: rgb(255, 96, 96)
+}
+
+.twitter{
+    color: rgb(101, 123, 184);
+}
+
+.twitter:hover {
+    color: rgb(101, 123, 184);
+}
+
+.facebook{
+    color: blue;
+}
+
+.facebook:hover{
+    color: blue;
+}
+
+.hand{
+    color:  rgb(43, 109, 117);
+}
+
+.hand:hover{
+    color: rgb(43, 109, 117);
+}
+
+
+.form-inline #last_name{
+    margin-left: 4px;
+}
+
+.modal-header{
+    background-color: rgb(43, 109, 117);
+}
+
+.modal-title strong{
+    color: white;
+}
+
+.modal-body{
+    background-color: rgba(235, 235, 235, 0.5);
+    color: rgb(43, 109, 117);
+}
+.modal-footer{
+    background-color: rgb(43, 109, 117);
+    color:white;
+}
+
+.form-sign-up{
+    background-color: rgba(235, 235, 235, 0.5);
+    color: rgb(43, 109, 117);
+    border: 1px solid black
+}
+
+
+.footer{
+    background-color: rgb(43, 109, 117);
+    color: aliceblue;
+    padding-bottom: 100px;
+}
+
+.sponsore ul {
+    list-style-type: none;
+    text-decoration: none;
+    float: left;
+    margin-right: 20px;
+}
+
+.sponsore{
+    float: left;
+}
+
+.sponsore > li{
+    float: left;
+}
+
+.sponsore li a {
+    float: left;
+}
+
+
+a:hover{
+    color: black;
+}
+
+.network{
+    display: inline;
+    margin: 5px;
+    padding: 2px;
+}
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.item{
+    color: white;
+    font-size: 25px;
+}
+
+.item-left{
+    float: left;
+}
+
+.contenu {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.comment{
+    color: rgb(68, 66, 66);
+}
+
+#error_comment{
+    display: none
+}
+
+
+.image{
+    height: 300px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+}
+
+.content{
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media(max-width: 640px){
+    .disabled{
+        display: none;
+    }
+    .card-follow{
+        display: none
+    }
+    .form-sign-up{
+        background-color: rgba(235, 235, 235, 0.5);
+        color: rgb(43, 109, 117);
+        border: 1px solid whitesmoke
+    }
+}
+
+@media(max-width:900px){
+
+}
+
+@media(max-width:1024px){
+    .user-info{
+        position: relative;
+    }
+
+    .top-article{
+        display: none
+    }
+    .disabled{
+        font-size: 10px;
+    }
+    .chat{
+        display: none;
+    }
+    .card-follow{
+        height: 100%;
+        width: 80%;
+        margin-left: 10%
+    }
+    .disabled-item{
+        display: none;
+    }
+    .article-follow{
+        height: 100%;
+        width: 80%;
+    }
+}

@@ -1,0 +1,4 @@
+/.~lock.books.csv#
+__pycache__
+.vscode
+flask_session

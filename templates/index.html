@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+    <title>{% block title %} {{user_data.username}} {% endblock %}</title>
+
+{% block body %}
+<style>
+    .top{
+        margin-top: 5%;
+    }
+</style>
+
+<div class="container top">
+    <div class="row">
+        <div class="col-6 mt-5 mx-auto mb-5">
+
+            <form action="{{ url_for('search') }}" accept-charset="utf-8" method="GET">
+                <div class="form-inline">
+                    <input class="form-control col-9 form-control-sm" name="search_book" type="text" placeholder="search for book by isbn">
+                    <button type="submit" class="btn btn-dark mx-auto col-2">Search</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mb-5" id='book_found'>
+            {% if all_book %}
+                {{all_book}}
+            {% endif %}
+            {% if msg %}
+            <h1>{{msg}}</h1>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

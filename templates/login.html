@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+    <title>{% block title %} {{title}} {% endblock %}</title>
+
+
+{% block body %}
+<div class="container mt-5">
+    {% if message %}
+    <div class="row">
+      <div id="message" class="col-md-7 col-sm-8 p-2 mx-auto border border-danger alert-danger mt-4" >
+        <ul>
+          {% for mess in message %}
+          <li>{{mess}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="row">
+      <div class="col-md-7 mx-auto">
+
+        <div class=" form-sign-up  text-center mt-4 mb-3 p-3 ">
+            
+            <h3 class=" text-center">inscrivez-vous sur HaitiBooK</h3>
+            <form action="{{ url_for('connexion') }}"  class=""  method="POST" accept-charset="utf-8">
+              
+                <div class="form-inline ">
+                    <label for=""></label>
+                    <input type="text" name="full_name" id="full_name" class="form-control col mr-1" placeholder="Full name" aria-describedby="helpId">
+                    <small id="helpId" class="text-muted"></small>
+
+                    <label for=""></label>
+                    <input type="text" name="username" id="username" class="form-control col ml-1"  placeholder="Username" aria-describedby="helpId">
+                    <small id="helpId" class="text-muted"></small>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" class="form-control col " placeholder="Email" aria-describedby="helpId">
+                    <small id="helpId" class="text-muted"></small>
+
+                    <label for=""></label>
+                    <input type="password" class="form-control col" name="password" id="password" placeholder="password">
+
+                    <label for=""></label>
+                    <input type="password" class="form-control col " name="password2" id="re_password" placeholder="re-tape password">
+                </div>
+
+                <button type="submit" id="submit"class="btn  col btn-lg btn-block">Sign up</button>
+            
+            </form> 
+        </div>
+    </div>
+  </div>
+
+
+
+<!-- eight bootstrap modal se sa nap use pou site la -->
+
+<!-- Modal -->
+<div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <!--Content-->
+    <div class="modal-content w-200 form-elegant">
+      <!--Header-->
+      <div class="modal-header  text-center">
+        <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>se connecter à Passport</strong></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+          <div class=" mx-4">
+            <!--Body-->
+
+        <form action="{{ url_for('index') }}" method="POST" accept-charset="utf-8">
+                
+            <div class="md-form mb-4">
+              <input type="text" id="Form-email" name="username" class="form-control validate">
+              <label data-error="wrong" data-success="right" for="Form-email1">Your email</label>
+            </div>
+
+            <div class="md-form pb-3">
+              <input type="password" id="Form-pass" name="password" class="form-control validate">
+              <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
+              <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
+                  Password?</a></p>
+            </div>
+
+            <div class="text-center mb-3">
+              <input type="submit" class="btn btn-outline-dark btn-block" placeholder="connecter">
+            </div>
+
+      </form>
+
+        <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
+          with:</p>
+
+        <div class="row my-3 d-flex justify-content-center">
+          <!--Facebook-->
+          <button type="button" class="btn btn-dark  rounded-circle mr-md-3 z-depth-1a"><i class="fa fa-facebook-f text-center"></i></button>
+          <!--Twitter-->
+          <button type="button" class="btn btn-dark rounded-circle mr-md-3 z-depth-1a"><i class="fa fa-twitter"></i></button>
+          <!--Google +-->
+          <button type="button" class="btn btn-dark rounded-circle z-depth-1a"><i class="fa fa-instagram"></i></button>
+        </div>
+      </div>
+    </div>
+      <!--Footer-->
+    <div class="modal-footer">
+        <div class=" mx-5 pt-3 mb-1">
+            <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="blue-text ml-1">
+            Sign Up</a></p>
+        </div>
+    </div>
+    
+</div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Modal -->
+
+</div>
+
+{% endblock %}
